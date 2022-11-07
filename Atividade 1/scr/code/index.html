@@ -2,22 +2,62 @@
 <html lang="pt-br">
 <head>
     <!--!Configurações básica-->
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <title>Calculadora</title>
 
     <!--!Meta dados-->
-    <meta name="description" content="Calculadora matemática simples.">
-    <meta name="keywords" content="calculadora, ifrn, parelhas, informática, js">
-    <meta name="author" content="Eyshila Buriti, Fernanda Dantas, Pedro Lucas">
+    <meta name="description" content="Calculadora matemática simples."/>
+    <meta name="keywords" content="calculadora, ifrn, parelhas, informática, js"/>
+    <meta name="author" content="Eyshila Buriti, Fernanda Dantas, Pedro Lucas"/>
 
     <!--!Configurações de estilização-->
-    <link rel="shortcut icon" href="./images/favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="./images/favicon.ico" type="image/x-icon"/>
     <script src="https://cdn.tailwindcss.com"></script>
+
+    <!--!Estilização tailwind-->
+    <style type="text/tailwindcss">
+        .input-number{
+            @apply p-2 m-1 rounded-md bg-gray-300 border-b-2 border-gray-500 text-2xl col-span-2 row-span-2 outline-2 outline-sky-600 dark:bg-gray-900 dark:border-black dark:text-white dark:outline-violet-700;
+        }
+
+        .input-operations{
+            @apply rounded-md bg-gray-300 border-b-2 border-gray-500 text-sky-600 text-4xl col-span-1 row-span-1 hover:bg-sky-100 dark:bg-gray-900 dark:border-black dark:text-violet-700 hover:dark:bg-slate-800;
+        }
+
+        .input-equals{
+            @apply rounded-md bg-gray-300 border-b-2 border-gray-500 text-violet-700 text-4xl col-span-3 dark:bg-gray-900 dark:border-black dark:text-sky-600;
+        }
+
+        .result{
+            @apply text-8xl text-gray-900 font-semibold text-center col-span-3 dark:text-slate-200;
+        }
+    </style>
 </head>
-<body>
+<body class="bg-gray-200 dark:bg-gray-800 h-screen flex justify-center items-center">
     <!--!Estruturação da página-->
+    <!--*Página Principal-->
+    <main class="h-full w-full m-3 md:w-1/4 flex justify-center items-center">
+        <!--?Formulário-->
+        <form class="h-2/3 grid grid-cols-3 grid-rows-6 grid-flow-row-dense gap-2">
+            <!--Números-->
+            <input type="number" id="number1" class="input-number" placeholder="Number 1">
+            <input type="number" id="number2" class="input-number" placeholder="Number 2">
+
+            <!--Operações-->
+            <button class="input-operations">+</button>
+            <button class="input-operations">-</button>
+            <button class="input-operations">×</button>
+            <button class="input-operations">÷</button>
+
+            <!--Igualdade-->
+            <button class="input-equals" disabled>=</button>
+
+            <!--Resultado-->
+            <output id="result" class="result">10</output>
+        </form>
+    </main>
 
 
     <!--!Scripts-->
