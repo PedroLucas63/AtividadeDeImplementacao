@@ -4,3 +4,4 @@ Repositório com as atividade da disciplina de Projeto de Desenvolvimento de Sof
 ## Alunos:
 - Pedro Lucas Medeiros do Nascimento (20191214010003)
 - Eyshila Buriti de Araujo Azevedo (20191214010015)
+- Fernanda Azevedo (20191214010014)
