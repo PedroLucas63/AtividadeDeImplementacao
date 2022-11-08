@@ -40,13 +40,13 @@
     <!--*Página Principal-->
     <main class="h-full w-full m-3 md:w-1/4 flex justify-center items-center">
         <!--?Formulário-->
-        <form class="h-2/3 grid grid-cols-3 grid-rows-6 grid-flow-row-dense gap-2">
+        <form class="h-2/3 grid grid-cols-3 grid-rows-6 grid-flow-row-dense gap-2" onsubmit="return false">
             <!--Números-->
-            <input type="number" id="number1" class="input-number" placeholder="Number 1">
-            <input type="number" id="number2" class="input-number" placeholder="Number 2">
+            <input type="number" id="number1" class="input-number" placeholder="Número 1">
+            <input type="number" id="number2" class="input-number" placeholder="Número 2">
 
             <!--Operações-->
-            <button class="input-operations">+</button>
+            <button class="input-operations" onclick="calc.add()">+</button>
             <button class="input-operations">-</button>
             <button class="input-operations">×</button>
             <button class="input-operations">÷</button>
@@ -55,12 +55,15 @@
             <button class="input-equals" disabled>=</button>
 
             <!--Resultado-->
-            <output id="result" class="result">10</output>
+            <output id="result" class="result">0</output>
         </form>
     </main>
 
 
     <!--!Scripts-->
+    <!--*JQuery-->
+    <script src="https://code.jquery.com/jquery-3.6.1.slim.min.js" integrity="sha256-w8CvhFs7iHNVUtnSP0YKEg00p9Ih13rlL9zGqvLdePA=" crossorigin="anonymous"></script>
+    <!--*Script Local-->
     <script src="./js/script.js"></script>
 </body>
 </html>
