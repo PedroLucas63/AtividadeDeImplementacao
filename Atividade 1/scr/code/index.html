@@ -27,7 +27,11 @@
         }
 
         .input-equals{
-            @apply rounded-md bg-gray-300 border-b-2 border-gray-500 text-violet-700 text-4xl col-span-3 dark:bg-gray-900 dark:border-black dark:text-sky-600;
+            @apply rounded-md bg-gray-300 border-b-2 border-gray-500 text-violet-700 text-4xl col-span-2 dark:bg-gray-900 dark:border-black dark:text-sky-600;
+        }
+
+        .input-clear{
+            @apply rounded-md bg-gray-300 border-b-2 border-gray-500 text-violet-700 text-2xl col-span-1 row-span-1 hover:bg-sky-100 dark:bg-gray-900 dark:border-black dark:text-sky-600 hover:dark:bg-slate-800;
         }
 
         .result{
@@ -53,6 +57,9 @@
 
             <!--Igualdade-->
             <button class="input-equals" disabled>=</button>
+
+            <!--Apagar-->
+            <button class="input-clear">C</button>
 
             <!--Resultado-->
             <output id="result" class="result">0</output>
