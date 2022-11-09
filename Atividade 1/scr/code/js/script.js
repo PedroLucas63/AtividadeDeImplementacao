@@ -53,6 +53,44 @@ class Calc {
          */
         return 0;
     }
+
+    mult() {
+        /**
+         * Cria uma variável que recebe a multiplicação dos valores dos dois números:
+         */
+
+        let mult = parseFloat(number1.value) * parseFloat(number2.value);
+
+        /**
+         * Adiciona, em formato de texto, o valor da multiplicação no resultado:
+         */
+
+        result.innerText = mult;
+
+        /**
+         * Retorna 0 caso não tenha acontecido erros:
+         */
+        return 0;
+    }
+
+    div() {
+        /**
+         * Cria uma variável que recebe a divisão dos valores dos dois números:
+         */
+
+        let div = parseFloat(number1.value) / parseFloat(number2.value);
+
+        /**
+         * Adiciona, em formato de texto, o valor da divisão no resultado:
+         */
+
+        result.innerText = div;
+
+        /**
+         * Retorna 0 caso não tenha acontecido erros:
+         */
+        return 0;
+    }
 }
 
 /** 
