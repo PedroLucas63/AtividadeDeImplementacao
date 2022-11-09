@@ -18,20 +18,30 @@ class Calc {
      *  Soma dois números e atualiza o valor no Objeto result: 
     */
     add() {
-        /** 
-         * Cria uma variável que recebe a soma dos valores dos dois números: 
+        /**
+         * Verifica se os inputs são diferentes de vazios:
         */
-        let sum = parseFloat(number1.value) + parseFloat(number2.value);
+        if(number1.value != "" && number2.value != ""){
+            /** 
+             * Cria uma variável que recebe a soma dos valores dos dois números: 
+            */
+            let sum = parseFloat(number1.value) + parseFloat(number2.value);
 
-        /** 
-         * Adiciona, em formato de texto, o valor da soma no resultado: 
-        */
-        result.innerText = sum;   
+            /** 
+             * Adiciona, em formato de texto, o valor da soma no resultado: 
+            */
+            result.innerText = sum;   
 
-        /** 
-         * Retorna 0 caso não tenha acontecido erros: 
+            /** 
+             * Retorna 0 caso não tenha acontecido erros: 
+            */
+            return 0; 
+        }
+
+        /**
+         * Retorna 1 pelo fato que a operação não pode ser realizada uma vez que um dos inputs está vazio:
         */
-        return 0; 
+        return 1;
     }
 
     /** 
