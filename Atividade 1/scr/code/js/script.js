@@ -34,6 +34,25 @@ class Calc {
         */
         return 0; 
     }
+
+    sub() {
+        /**
+         * Cria uma variável que recebe a subtração dos valores dos dois números:
+         */
+
+        let sub = parseFloat(number1.value) - parseFloat(number2.value);
+
+        /**
+         * Adiciona, em formato de texto, o valor da subtração no resultado:
+         */
+
+        result.innerText = sub;
+
+        /**
+         * Retorna 0 caso não tenha acontecido erros:
+         */
+        return 0;
+    }
 }
 
 /** 
