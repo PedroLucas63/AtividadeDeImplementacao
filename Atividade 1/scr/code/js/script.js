@@ -69,25 +69,19 @@ class Calc {
     */
     mult() {
         /**
-         * Verifica se os inputs são diferentes de vazios:
+         * Cria uma variável que recebe a multiplicação dos valores dos dois números:
         */
-        if(number1.value != "" && number2.value != ""){
-            /**
-             * Cria uma variável que recebe a multiplicação dos valores dos dois números:
-            */
-            let mult = parseFloat(number1.value) * parseFloat(number2.value);
+        let mult = parseFloat(number1.value) * parseFloat(number2.value);
 
-            /**
-             * Adiciona, em formato de texto, o valor da multiplicação no resultado:
-            */
-            result.innerText = mult;
+        /**
+         * Adiciona, em formato de texto, o valor da multiplicação no resultado:
+        */
+        result.innerText = mult;
 
-            /**
-             * Retorna 0 caso não tenha acontecido erros:
-            */
-            return 0;
-        }
-        return 1; 
+        /**
+         * Retorna 0 caso não tenha acontecido erros:
+        */
+        return 0;
     }
 
     /** 
@@ -95,24 +89,19 @@ class Calc {
     */
     div() {
         /**
-         * Verifica se os inputs são diferentes de vazios:
+         * Cria uma variável que recebe a divisão dos valores dos dois números:
         */
-        if(number1.value != "" && number2.value != ""){
-            /**
-             * Cria uma variável que recebe a divisão dos valores dos dois números:
-            */
-            let div = parseFloat(number1.value) / parseFloat(number2.value);
+        let div = parseFloat(number1.value) / parseFloat(number2.value);
 
-            /**
-             * Adiciona, em formato de texto, o valor da divisão no resultado:
-            */
-            result.innerText = div;
+        /**
+         * Adiciona, em formato de texto, o valor da divisão no resultado:
+        */
+        result.innerText = div;
 
-            /**
-             * Retorna 0 caso não tenha acontecido erros:
-            */
-            return 0;
-        }
+        /**
+         * Retorna 0 caso não tenha acontecido erros:
+        */
+        return 0;
     }
 
     /**
