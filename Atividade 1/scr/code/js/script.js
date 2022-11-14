@@ -87,7 +87,11 @@ class Calc {
             */
             return 0;
         }
-        return 1; 
+        
+        /**
+         * Retorna 1 pelo fato que a operação não pode ser realizada uma vez que um dos inputs está vazio:
+        */
+         return 1; 
     }
 
     /** 
@@ -113,6 +117,11 @@ class Calc {
             */
             return 0;
         }
+        
+        /**
+         * Retorna 1 pelo fato que a operação não pode ser realizada uma vez que um dos inputs está vazio:
+        */
+         return 1;
     }
 
     /**
