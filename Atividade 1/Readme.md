@@ -7,7 +7,7 @@ O seguinte projeto de código visa produzir uma calculadora que execute as opera
 - [x] ➖ Subtrair.
 - [x] ✖️ Multiplicar.
 - [x] ➗ Dividir.
-- [ ] 🆑 Limpar.
+- [x] 🆑 Limpar.
 - [x] 🟰 Exibir o resultado.
 
 ## Tecnologias:
