@@ -1,10 +1,10 @@
 /** 
- * @class Representa uma calculadora: 
+ * @class Representa uma calculadora.
 */
 class Calc {
     /** 
      * @constructor
-     * @param {Object} number1 - O objeto HTML que contém o primeiro número da calculadora 
+     * @param {Object} number1 - O objeto HTML que contém o primeiro número da calculadora
      * @param {Object} number2 - O objeto HTML que contém o segundo número da calculadora
      * @param {Object} result - O objeto HTML que contém o resultado da calculadora
     */
@@ -15,7 +15,7 @@ class Calc {
     }
 
     /** 
-     *  Soma dois números e atualiza o valor no Objeto result: 
+     *  Soma dois números e atualiza o valor no Objeto result.
     */
     add() {
         /**
@@ -45,7 +45,7 @@ class Calc {
     }
 
     /** 
-     *  Subtrai dois números e atualiza o valor no Objeto result: 
+     *  Subtrai dois números e atualiza o valor no Objeto result.
     */
     sub() {
         /**
@@ -65,7 +65,7 @@ class Calc {
     }
 
     /** 
-     *  Multiplica dois números e atualiza o valor no Objeto result: 
+     *  Multiplica dois números e atualiza o valor no Objeto result.
     */
     mult() {
         /**
@@ -85,7 +85,7 @@ class Calc {
     }
 
     /** 
-     *  Divide dois números e atualiza o valor no Objeto result: 
+     *  Divide dois números e atualiza o valor no Objeto result.
     */
     div() {
         /**
@@ -105,7 +105,7 @@ class Calc {
     }
 
     /**
-     * Limpa todos os valores expostos nos objetos da tela
+     * Limpa todos os valores expostos nos objetos da tela.
     */
     clear() {
         /**
@@ -124,6 +124,6 @@ class Calc {
 }
 
 /** 
- * @constant {Calc} calc - Faz o instânciamento da classe Calc() em um objeto passando os Objetos HTML: 
+ * @constant {Calc} calc - Faz o instânciamento da classe Calc() em um objeto passando os Objetos HTML.
 */
 const calc = new Calc($("#number1"), $("#number2"), $("#result"));
