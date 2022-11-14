@@ -103,6 +103,24 @@ class Calc {
         */
         return 0;
     }
+
+    /**
+     * Limpa todos os valores expostos nos objetos da tela
+    */
+    clear() {
+        /**
+         * Limpa o valor do Objeto result:
+        */
+        result.innerText = 0;
+        /**
+         * Limpa o valor do Objeto number1:
+        */
+        number1.value = "";
+        /**
+         * Limpa o valor do Objeto number2:
+        */
+        number2.value = "";
+    }
 }
 
 /** 
