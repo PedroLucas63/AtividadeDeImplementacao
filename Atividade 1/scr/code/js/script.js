@@ -127,3 +127,5 @@ class Calc {
  * @constant {Calc} calc - Faz o instânciamento da classe Calc() em um objeto passando os Objetos HTML.
 */
 const calc = new Calc($("#number1"), $("#number2"), $("#result"));
+
+/* Comentário de Testes */
