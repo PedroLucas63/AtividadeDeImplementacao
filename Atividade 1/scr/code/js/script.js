@@ -128,4 +128,4 @@ class Calc {
 */
 const calc = new Calc($("#number1"), $("#number2"), $("#result"));
 
-/* Comentário de Testes */
+/* Comentário de Testes (Pedro Editou) */
