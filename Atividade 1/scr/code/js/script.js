@@ -69,19 +69,25 @@ class Calc {
     */
     mult() {
         /**
-         * Cria uma variável que recebe a multiplicação dos valores dos dois números:
+         * Verifica se os inputs são diferentes de vazios:
         */
-        let mult = parseFloat(number1.value) * parseFloat(number2.value);
+        if(number1.value != "" && number2.value != ""){
+            /**
+             * Cria uma variável que recebe a multiplicação dos valores dos dois números:
+            */
+            let mult = parseFloat(number1.value) * parseFloat(number2.value);
 
-        /**
-         * Adiciona, em formato de texto, o valor da multiplicação no resultado:
-        */
-        result.innerText = mult;
+            /**
+             * Adiciona, em formato de texto, o valor da multiplicação no resultado:
+            */
+            result.innerText = mult;
 
-        /**
-         * Retorna 0 caso não tenha acontecido erros:
-        */
-        return 0;
+            /**
+             * Retorna 0 caso não tenha acontecido erros:
+            */
+            return 0;
+        }
+        return 1; 
     }
 
     /** 
@@ -89,19 +95,24 @@ class Calc {
     */
     div() {
         /**
-         * Cria uma variável que recebe a divisão dos valores dos dois números:
+         * Verifica se os inputs são diferentes de vazios:
         */
-        let div = parseFloat(number1.value) / parseFloat(number2.value);
+        if(number1.value != "" && number2.value != ""){
+            /**
+             * Cria uma variável que recebe a divisão dos valores dos dois números:
+            */
+            let div = parseFloat(number1.value) / parseFloat(number2.value);
 
-        /**
-         * Adiciona, em formato de texto, o valor da divisão no resultado:
-        */
-        result.innerText = div;
+            /**
+             * Adiciona, em formato de texto, o valor da divisão no resultado:
+            */
+            result.innerText = div;
 
-        /**
-         * Retorna 0 caso não tenha acontecido erros:
-        */
-        return 0;
+            /**
+             * Retorna 0 caso não tenha acontecido erros:
+            */
+            return 0;
+        }
     }
 
     /**
@@ -128,4 +139,4 @@ class Calc {
 */
 const calc = new Calc($("#number1"), $("#number2"), $("#result"));
 
-/* Comentário de Testes */
+/* Comentário de Testes (Fernanda editou) */
