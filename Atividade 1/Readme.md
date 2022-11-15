@@ -1,7 +1,9 @@
 # Calculadora Básica
+
 O seguinte projeto de código visa produzir uma calculadora que execute as operações de soma, subtração, multiplicação e divisão na linguagem de programação JavaScript.
 
-## Funções:
+## Funções
+
 - [x] 🔢 Receber dois números.
 - [x] ➕ Somar.
 - [x] ➖ Subtrair.
@@ -10,11 +12,17 @@ O seguinte projeto de código visa produzir uma calculadora que execute as opera
 - [x] 🆑 Limpar.
 - [x] 🟰 Exibir o resultado.
 
-## Tecnologias:
+## Tecnologias
+
 - HTML.
 - JavaScript.
 - [Tailwind CSS](https://tailwindcss.com/).
 - [JQuery](https://jquery.com/).
 
-## Direitos:
+## Fase de desenvolvimento
+
+A seguinte versão do projeto da calculadora está na fase de desenvolvimento: Concluída ✅.
+
+## Direitos
+
 Todos os direitos reservados © Eyshila Buriti, Fernanda Dantas, Pedro Lucas 2022.
