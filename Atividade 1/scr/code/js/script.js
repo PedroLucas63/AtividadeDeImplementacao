@@ -14,6 +14,59 @@ class Calc {
         this.result = result;
     }
 
+    /**
+     * Arredonda o valor do resultado baseado no tamanho da tela.
+     * @param {float} value - O valor do resultado que deve ser arredondado
+     * @return {float} - Retorna o valor arredondado
+    */
+    round(value) {
+        /**
+         * Verifica a quantidade de dígitos do valor passado:
+        */
+        let lenght = String(value).length;
+
+        /**
+         * Multiplica pelo tamanho em pixeis de cada dígito:
+        */
+        let numberWidht = lenght * 96;
+
+        /**
+         * Recebe a largura da página:
+        */
+        let pageWidht = window.screen.width;
+
+        /**
+         * Cria o objeto que deve receber o novo valor:
+        */
+        let newValue;
+
+        /**
+         * Verifica se a largura dos números é maior do que da página:
+        */
+        if(numberWidht > pageWidht) {
+            /**
+             * Encontra o máximo de digitos para a página:
+            */
+            let maxDigits = pageWidht / 96;
+
+            /**
+             * Arredonda o número para a quantidade de digitos máxima:
+            */
+            newValue = Number(value).toPrecision(maxDigits);
+        }
+        else{
+            /**
+             * Define o novo valor como o valor já passado:
+            */
+            newValue = value;
+        }
+
+        /**
+         * Retorna o número arredondado:
+        */
+        return newValue;
+    }
+
     /** 
      *  Soma dois números e atualiza o valor no Objeto result.
     */
@@ -23,9 +76,10 @@ class Calc {
         */
         if(number1.value != "" && number2.value != ""){
             /** 
-             * Cria uma variável que recebe a soma dos valores dos dois números: 
+             * Cria uma variável que recebe a soma dos valores dos dois números e arredonda: 
             */
             let sum = parseFloat(number1.value) + parseFloat(number2.value);
+            sum = this.round(sum);
 
             /** 
              * Adiciona, em formato de texto, o valor da soma no resultado: 
@@ -53,9 +107,10 @@ class Calc {
          */
         if(number1.value != "" && number2.value != ""){
             /**
-            * Cria uma variável que recebe a subtração dos valores dos dois números:
+            * Cria uma variável que recebe a subtração dos valores dos dois números e arredonda:
             */
             let sub = parseFloat(number1.value) - parseFloat(number2.value);
+            sub = this.round(sub);
 
             /**
              * Adiciona, em formato de texto, o valor da subtração no resultado:
@@ -83,9 +138,10 @@ class Calc {
         */
         if(number1.value != "" && number2.value != ""){
             /**
-             * Cria uma variável que recebe a multiplicação dos valores dos dois números:
+             * Cria uma variável que recebe a multiplicação dos valores dos dois números e arredonda:
             */
             let mult = parseFloat(number1.value) * parseFloat(number2.value);
+            mult = this.round(mult);
 
             /**
              * Adiciona, em formato de texto, o valor da multiplicação no resultado:
@@ -113,10 +169,10 @@ class Calc {
         */
         if(number1.value != "" && number2.value != ""){
             /**
-             * Cria uma variável que recebe a divisão dos valores dos dois números:
+             * Cria uma variável que recebe a divisão dos valores dos dois números e arredonda:
             */
             let div = parseFloat(number1.value) / parseFloat(number2.value);
-
+            div = this.round(div);
             /**
              * Adiciona, em formato de texto, o valor da divisão no resultado:
             */

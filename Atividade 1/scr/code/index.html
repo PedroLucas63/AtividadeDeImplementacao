@@ -16,10 +16,14 @@
     <link rel="shortcut icon" href="./images/favicon.ico" type="image/x-icon"/>
     <script src="https://cdn.tailwindcss.com"></script>
 
+    <!--!Scripts Externos-->
+    <!--*JQuery-->
+    <script src="https://code.jquery.com/jquery-3.6.1.slim.min.js" integrity="sha256-w8CvhFs7iHNVUtnSP0YKEg00p9Ih13rlL9zGqvLdePA=" crossorigin="anonymous"></script>
+
     <!--!Estilização tailwind-->
     <style type="text/tailwindcss">
         .input-number{
-            @apply p-2 m-1 rounded-md bg-gray-300 border-b-2 border-gray-500 text-2xl col-span-2 row-span-2 outline-2 outline-sky-600 dark:bg-gray-900 dark:border-black dark:text-white dark:outline-violet-700;
+            @apply p-2 rounded-md bg-gray-300 border-b-2 border-gray-500 text-3xl md:text-4xl col-span-2 row-span-2 outline-2 outline-sky-600 dark:bg-gray-900 dark:border-black dark:text-white dark:outline-violet-700;
         }
 
         .input-operations{
@@ -35,42 +39,45 @@
         }
 
         .result{
-            @apply text-8xl text-gray-900 font-semibold text-center col-span-3 dark:text-slate-200;
+            @apply w-full absolute left-0 text-8xl text-gray-900 font-semibold text-center dark:text-slate-200;
         }
     </style>
 </head>
 <body class="bg-gray-200 dark:bg-gray-800 h-screen flex justify-center items-center">
     <!--!Estruturação da página-->
     <!--*Página Principal-->
-    <main class="h-full w-full m-3 md:w-1/4 flex justify-center items-center">
+    <main class="m-3 h-full w-full md:w-1/4">
         <!--?Formulário-->
-        <form class="h-2/3 grid grid-cols-3 grid-rows-6 grid-flow-row-dense gap-2" onsubmit="return false">
-            <!--Números-->
-            <input type="number" step="any" id="number1" class="input-number" placeholder="Número 1">
-            <input type="number" step="any" id="number2" class="input-number" placeholder="Número 2">
+        <form onsubmit="return false" class="h-full flex flex-col justify-center items-center flex-wrap">
+            <!--Divisão da seção de números e operações-->
+            <div class="h-2/3 md:h-1/2 grid grid-cols-3 grid-rows-5 grid-flow-row-dense gap-2">
+                <!--Números-->
+                <input type="number" step="any" id="number1" class="input-number" placeholder="Número 1">
+                <input type="number" step="any" id="number2" class="input-number" placeholder="Número 2">
 
-            <!--Operações-->
-            <button class="input-operations" onclick="calc.add()">+</button>
-            <button class="input-operations" onclick="calc.sub()">-</button>
-            <button class="input-operations" onclick="calc.mult()">×</button>
-            <button class="input-operations" onclick="calc.div()">÷</button>
+                <!--Operações-->
+                <button class="input-operations" onclick="calc.add()">+</button>
+                <button class="input-operations" onclick="calc.sub()">-</button>
+                <button class="input-operations" onclick="calc.mult()">×</button>
+                <button class="input-operations" onclick="calc.div()">÷</button>
 
-            <!--Igualdade-->
-            <button class="input-equals" disabled>=</button>
+                <!--Igualdade-->
+                <button class="input-equals" disabled>=</button>
 
-            <!--Apagar-->
-            <button class="input-clear" onclick="calc.clear()">C</button>
+                <!--Apagar-->
+                <button class="input-clear" onclick="calc.clear()">C</button>
+            </div>
 
-            <!--Resultado-->
-            <output id="result" class="result">0</output>
+            <!--Divisão da seção do resultado-->
+            <div>
+                <!--Resultado-->    
+                <output id="result" class="result">0</output>
+            </div>
+            
         </form>
     </main>
 
-    <!--!Scripts-->
-    <!--*JQuery-->
-    <script src="https://code.jquery.com/jquery-3.6.1.slim.min.js" integrity="sha256-w8CvhFs7iHNVUtnSP0YKEg00p9Ih13rlL9zGqvLdePA=" crossorigin="anonymous"></script>
-
-    <!--*Script Local-->
+    <!--!Scripts Local-->
     <script src="./js/script.js"></script>
 </body>
 </html>
