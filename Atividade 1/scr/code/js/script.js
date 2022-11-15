@@ -49,19 +49,29 @@ class Calc {
     */
     sub() {
         /**
-         * Cria uma variável que recebe a subtração dos valores dos dois números:
-        */
-        let sub = parseFloat(number1.value) - parseFloat(number2.value);
+         * Verifica se os inputs são diferentes de vazios:
+         */
+        if(number1.value != "" && number2.value != ""){
+            /**
+            * Cria uma variável que recebe a subtração dos valores dos dois números:
+            */
+            let sub = parseFloat(number1.value) - parseFloat(number2.value);
+
+            /**
+             * Adiciona, em formato de texto, o valor da subtração no resultado:
+            */
+            result.innerText = sub;
+
+            /**
+             * Retorna 0 caso não tenha acontecido erros:
+            */
+            return 0;
+        }
 
         /**
-         * Adiciona, em formato de texto, o valor da subtração no resultado:
-        */
-        result.innerText = sub;
-
-        /**
-         * Retorna 0 caso não tenha acontecido erros:
-        */
-        return 0;
+         * Retorna 1 pelo fato que a operação não pode ser realizada uma vez que um dos inputs está vazio:
+         */
+        return 1;
     }
 
     /** 
