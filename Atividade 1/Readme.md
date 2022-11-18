@@ -12,6 +12,13 @@ O seguinte projeto de código visa produzir uma calculadora que execute as opera
 - [x] 🆑 Limpar.
 - [x] 🟰 Exibir o resultado.
 
+## Interface
+
+O projeto foi construido inteiramente com a base do conceito "mobile first", sendo responsivo com telas maiores e com disponibilidade de dois temas: claro e escuro.
+
+![Imagem da interface no modo claro](./scr/docs/images/light.png)
+![Imagem da interface no modo escuro](./scr/docs/images/dark.png)
+
 ## Tecnologias
 
 - HTML.
